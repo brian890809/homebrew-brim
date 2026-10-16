@@ -1,16 +1,15 @@
 cask "brim" do
-  version "0.1.0-preview.14"
-  sha256 "36e25a242603ad5715986d0987db5580d27a46d4b7f64d9b3f1080c193241f3b"
+  version "0.1.0-preview.15"
+  sha256 "d58152a28fa24e20ef5de9f78de0e76dfe20ac4a75032a4a462080417d6cf0e6"
 
-  url "https://github.com/brian890809/codex-usage-menubar/releases/download/v#{version}/Agent-Usage-#{version}-macos-universal.zip"
+  url "https://github.com/brian890809/codex-usage-menubar/releases/download/v#{version}/Brim-#{version}-macos-universal.zip"
   name "Brim"
   desc "Codex and Claude Code usage limits in the MacBook notch"
   homepage "https://github.com/brian890809/codex-usage-menubar"
 
   depends_on macos: :ventura
 
-  # Rename to "Brim.app" once the build ships under the new name.
-  app "Agent Usage.app"
+  app "Brim.app"
 
   uninstall quit: "com.bchen.CodexUsageMenuBar"
 
@@ -23,7 +22,7 @@ cask "brim" do
 
   caveats <<~EOS
     Brim isn't notarized yet, so macOS blocks its first launch. Either run:
-      xattr -dr com.apple.quarantine "#{appdir}/Agent Usage.app"
+      xattr -dr com.apple.quarantine "#{appdir}/Brim.app"
     or open it once, then allow it in System Settings → Privacy & Security.
   EOS
 end

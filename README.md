@@ -16,7 +16,7 @@ Brim isn't notarized yet, since that needs a paid Apple Developer account, so
 macOS blocks the first launch. Clear the quarantine flag once:
 
 ```sh
-xattr -dr com.apple.quarantine "/Applications/Agent Usage.app"
+xattr -dr com.apple.quarantine "/Applications/Brim.app"
 ```
 
 Or open the app, then choose **Open Anyway** in System Settings → Privacy &
