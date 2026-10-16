@@ -10,13 +10,18 @@ brew install --cask brian890809/brim/brim
 Use the full `brian890809/brim/brim` name: Homebrew 7 only loads casks from
 taps you trust, and installing by full name trusts this cask.
 
-## Why the cask clears quarantine
+## First launch
 
-Brim isn't notarized yet, since that needs a paid Apple Developer account. Without
-help, macOS would block the first launch until you click **Open Anyway** in
-System Settings. The cask's `postflight` runs
-`xattr -dr com.apple.quarantine` on the installed app so it opens normally.
-The full source is in the main repo if you want to check what it does first.
+Brim isn't notarized yet, since that needs a paid Apple Developer account, so
+macOS blocks the first launch. Clear the quarantine flag once:
+
+```sh
+xattr -dr com.apple.quarantine "/Applications/Agent Usage.app"
+```
+
+Or open the app, then choose **Open Anyway** in System Settings → Privacy &
+Security. The full source is in the main repo if you want to check what it
+does first.
 
 ## Update and uninstall
 
