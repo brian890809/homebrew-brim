@@ -1,6 +1,6 @@
 # Brim Homebrew tap
 
-[Brim](https://github.com/brian890809/codex-usage-menubar) puts your Codex and
+[Brim](https://github.com/brian890809/brim) puts your Codex and
 Claude Code usage limits in the MacBook notch.
 
 ```sh
